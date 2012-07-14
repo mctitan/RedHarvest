@@ -1,0 +1,4 @@
+name: RedHarvest
+version: 0.0
+main: net.mctitan.redharvest.plugin.RedHarvestPlugin
+depend: [Factions]
