@@ -32,7 +32,9 @@ public class EntityListener implements Listener {
         l.add(0,-1.0,0);
         // natural spawns on top of netherrack in the overworld should be 
         // replaced with pig zombies.
-        if( w.getEnvironment() == Environment.NORMAL &&
+        if( !e.isCancelled() && 
+                e.getEntityType() != EntityType.PIG_ZOMBIE &&
+                w.getEnvironment() == Environment.NORMAL &&
                 e.getSpawnReason() == SpawnReason.NATURAL &&  
                 (l.getBlock().getType() == Material.NETHERRACK) || l.getBlock().getType() == Material.SOUL_SAND) {    
             e.setCancelled(true);
