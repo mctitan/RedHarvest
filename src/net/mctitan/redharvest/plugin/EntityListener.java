@@ -36,7 +36,7 @@ public class EntityListener implements Listener {
                 e.getEntityType() != EntityType.PIG_ZOMBIE &&
                 w.getEnvironment() == Environment.NORMAL &&
                 e.getSpawnReason() == SpawnReason.NATURAL &&  
-                (l.getBlock().getType() == Material.NETHERRACK) || l.getBlock().getType() == Material.SOUL_SAND) {    
+                (l.getBlock().getType() == Material.NETHERRACK || l.getBlock().getType() == Material.SOUL_SAND)) {    
             e.setCancelled(true);
             w.spawnCreature(e.getLocation(), EntityType.PIG_ZOMBIE);
         }
